@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>latihan29</title>
+    <style>
+        .topbar {
+            background: rgb(143, 155, 168);
+            padding: 10px 10px;
+            text-align: right;
+        }
+        .topbar a {
+            color: white;
+            text-decoration: none;
+            margin-left: 5px;
+            font-size: 15px;
+        }
+        .topbar .regis {
+            background-color: #ffff;
+            color: #000;
+            padding: 5px 10px;
+            border-radius: 0.5rem;
+        }
+        .topbar .login {
+            background-color: #368bd1;
+            color: white;
+            padding: 5px 20px;
+            border-radius: 0.5rem;
+        }
+        body {
+            background-color: white;
+            font-family: Arial, sans-serif;
+        }
+        #header {
+            display: flex;
+            align-items: center;
+            padding: 05px;
+        }
+        #logo {
+            width: 150px;
+            height: 150px;
+        }
+        #brand {
+            font-size: 30px;
+            color: #368bd1;
+            font-weight: bold;
+            margin-left: 30px;
+        }
+
+        .navbar-main {
+            background-color: rgb(143, 155, 168);
+            text-align: center;
+            padding: 10px 0;
+        }
+        .navbar-main .menu {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            justify-content: center;
+            display: flex;
+            gap: 250px;
+        }
+
+        /* Styling untuk menu utama */
+        .navbar-main .menu > a,
+        .navbar-main .menu > li > a {
+            display: block;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+
+        /* Dropdown Multilevel */
+        .navbar-main .menu li {
+            position: relative;
+            text-decoration: none;
+        }
+        .navbar-main .menu li ul {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            padding: 0;
+            margin: 0;
+            min-width: 160px;
+            z-index: 999;
+        }
+        .navbar-main .menu li:hover > ul {
+            display: block;
+        }
+        .navbar-main .menu li ul li a {
+            background-color: #ffffff;
+            color: black;
+            padding: 10px 15px;
+            display: block;
+            text-decoration: none;
+        }
+        .navbar-main .menu li ul li a:hover {
+            background-color:rgb(143, 155, 168);
+        }
+
+        /* Submenu ke kanan */
+        .navbar-main .menu li ul li {
+            position: relative;
+        }
+        .navbar-main .menu li ul li ul {
+            top: 0;
+            left: 100%;
+        }
+
+        .item {
+            display: inline-block;
+            margin: 0 100px;
+        }
+        .item a {
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+        }
+
+        hr {
+            margin: 10px 0;
+        }
+        .title {
+            font-size: 20px;
+            margin: 20px;
+        }
+
+        .produk {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 0 20px 40px 20px;
+        }
+
+        .produk2 {
+            border: 1px solid;
+            border-radius: 2rem;
+            width: 150px;
+            text-align: center;
+            padding: 10px;
+        }
+        .produk2 {
+            border: 1px solid;
+            border-radius: 2rem;
+            width: 150px;
+            text-align: center;
+            padding: 10px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .produk2:hover{
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .produk2 img {
+            width: 100px;
+            height: 150px;
+        }
+
+        .produk2 p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="topbar">
+        <a href="..." class="regis">Registrasi</a>
+        <a href="..." class="login">Login</a>
+    </div>
+
+    <div id="header">
+        <img id="logo" src="logobookdik.jpeg" alt="Logo">
+        <span id="brand">BOOKDIKSTORE</span>
+    </div>
+
+    <hr>
+
+    <nav class="navbar-main">  
+        <ul class="menu">  
+            <a href="#">HOME</a>  
+            <li>  
+                <a href="#">BUKU</a>  
+                <ul>  
+                    <li>  
+                        <a href="#">Fiksi</a>  
+                        <ul>  
+                            <li><a href="#">Novel</a></li>  
+                            <li><a href="#">Komik</a></li>  
+                        </ul>  
+                    </li>  
+                    <li>  
+                        <a href="#">Non Fiksi</a>  
+                        <ul>  
+                            <li><a href="#">Komputer</a></li>  
+                            <li><a href="latihan30.html">sience</a></li> 
+
+                        </ul>  
+                    </li>  
+                </ul>  
+            </li>  
+            <a href="#">MAJALAH</a> 
+            <li><a href="#">KORAN</a></li>  
+        </ul>  
+    </nav>
+
+    <hr>
+
+    <h2 class="title">Buku Best Seller</h2>
+    <div class="produk">
+        <div class="produk2">
+            <img src="Ancika 1995.jpeg">
+            <p>Ancika</p>
+            <p><b>Rp 75.000</b></p>
+        </div>
+        <div class="produk2">
+            <img src="BUKU PINTAR.jpeg">
+            <p>Buku Pintar</p>
+            <p><b>Rp115.000</b></p>
+        </div>
+        <div class="produk2">
+            <img src="Dongeng.jpeg">
+            <p>dongeng</p>
+            <p><b>Rp50.000</b></p>
+        </div>
+        <div class="produk2">
+            <img src="TeoriHukum.jpeg">
+            <p>TeoriHukum</p>
+            <p><b>Rp135.000</b></p>
+        </div>
+    </div>
+
+    <h2 class="title">Majalah Best Seller</h2>
+    <div class="produk">
+        <div class="produk2">
+            <img src="MasaBumi.jpg">
+            <p>masa bumi</p>
+            <p><b>Rp38.000</b></p>
+        </div>
+        <div class="produk2">
+            <img src="Binatang Bobo.jpg">
+            <p>Binatang</p>
+            <p><b>Rp25.000</b></p>
+        </div>
+        <div class="produk2">
+            <img src="Bobo.jpg">
+            <p>Bobo</p>
+            <p><b>Rp40.000</b></p>
+        </div>
+        <div class="produk2">
+            <img src="CilukbaJunior.jpg">
+            <p>cilukba junior</p>
+            <p><b>Rp38.000</b></p>
+        </div>
+    </div>
+
+</body>
+</html>
